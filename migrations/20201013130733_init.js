@@ -5,7 +5,7 @@ exports.up = function(knex) {
       tbl.increments();
       tbl.string('username', 120).notNullable().unique().index();
       tbl.string('password', 250).notNullable();
-      tbl.string('department', 200).notNullable()
+      tbl.string('department').notNullable()
   })
 };
 

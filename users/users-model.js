@@ -18,13 +18,8 @@ function findUserBy(filter){
     .orderBy('users.id')
 }
 
-async function addUser(usere){
-    try{
-        const [id] = await db('users').insert(user, 'id')
-        return findUserById(id)
-    }catch (error){
-    throw error
-    }
+function addUser(user){
+    return db('users').insert(user)
 }
 
 function findUserById(id){
